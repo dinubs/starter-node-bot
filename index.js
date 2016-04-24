@@ -13,3 +13,7 @@ controller.on('bot_channel_join', function (bot, message) {
 beepboop.on('add_resource', function (msg) {
   console.log('received request to add bot to team')
 })
+
+controller.hears(['hi'], ['direct_message', 'direct_mention'], function (bot, evt) {
+  bot.reply(evt, 'hello from bot.js')
+})
